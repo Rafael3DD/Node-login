@@ -1,0 +1,150 @@
+<div id="lista">
+    <div class="container-fluid mt-5">
+    <div class="row">
+        <div id="lateral" class="col-md-3 mt-5">
+                    <h6>Pesquisar</h6>
+                    
+                    <form action="/usuario/PesqPostagem" method="post">
+                        <input type="text" name="txtPesquisa" id="pesquisar">
+                        <input type="submit" value="Pesquisar" class="btn-pesquisar widget widget_block widget_search">
+                    </form>
+
+                    <h1>Pots Recentes</h1>
+                    {{#each postagens}}
+                        <!--passar os titulos como link -->
+                        <a href="/usuario/blog/lista/{{_id}}"><p>{{this.titulo}}</p></a>
+                        {{else}}
+                        <p>Nenhuma postagem a mostrar</p>
+                    {{/each}}
+
+                    <h1>Comentários Recentes</h1>
+
+                    {{#each comentarios}}
+                        <a href="/usuario/blog/lista/{{postagem}}/#comentario"><p>{{comentario}}</p></a>
+                        {{else}}
+                        <p>Nenhuma comentario a mostrar</p>
+
+                    {{/each}}
+                    
+                    <!--passar os comentario recentes -->
+                </div>
+        <div class="col-md-9">  
+            <div id="icone">
+                 <small ><h1 id="lista-titulo">{{postagem.titulo}}</h1></small>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
+                    <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg> 
+                <span class="postado-em">Publicado em {{#formatDate postagem.data}}{{/formatDate}}</span><br>
+            </div>
+           
+            <small><img src="/upload/{{postagem.img}}" alt="" id="imagem"></small><br>
+            
+            <p>{{postagem.conteudo}}</p>
+            
+        <!--Comentarios-->
+            
+        </div>
+    </div>
+    
+    </div>
+</div>
+
+
+
+<!--Formulário comentário-->
+    <div class="form-comentario"> 
+        <div class="card mt-4 border border-dark">
+    {{#if user}}   
+        {{#each comentarios}}
+                    <div class="card-body">
+                        <div class="campo-comentario" >
+                            <p id="email">Email: {{email}}</p>
+                            <p id="nome-usuario"><strong>{{nome}}</strong> disse:
+                            <span class="postado-em">às {{#formatDate this.data}}{{/formatDate}}</span></p>
+                            
+                            <p class="mb-5"  id="comentario">{{this.comentario}}</p>
+
+                                <!--<label for="comentario">Conteudo</label>
+                                        <textarea name="comentario" class="form-control" value="">{{comentario}}</textarea>-->
+
+                                <div id="teste">
+                                   <form action="/admin/comentario/deletar" method="POST">
+                                        <input type="hidden" name="id" value="{{_id}}">
+                                        <button type="submit" class="btn btn-danger btn-sm"  id="btn-delete">deletar</button>    
+                                    </form>
+                                    
+                                    <form action="/admin/comentario/edit/" method="POST">
+                                        <input type="hidden" name="id" value="{{_id}}">
+                                        <input type="hidden" id="nome" name="nome" class="form-control" value="{{nome}}">
+                                        <input type="hidden" id="email" name="email" class="form-control" value="{{email}}">
+                                        <input type="hidden" id="postagem" name="postagem" class="form-control" value="{{postagem}}">   
+
+
+                                        <button type="button" class="btn btn-warning btn-sm " id="btn-editar" onclick="clica('{{_id}}')">Editar</button>
+                                        
+                                        <p > 
+                                            <textarea   class=" hide form-control w-100" name="comentario"  id="{{_id}}">{{this.comentario}}</textarea> 
+                                        </p>
+
+                                       
+                                        <button  type="submit" class="btn btn-success btn-sm"  id="btn-confirma">Confirmar</button> 
+                                    </form>
+
+                                </div>    
+                        </div>
+                    </div>
+        {{else}}
+        {{/each}}      
+                    </div>
+    <!--Else do if / Não mostra os botões-->
+    {{else}}
+
+            {{#each comentarios}}
+                    <div class="card-body">
+                        <div class="campo-comentario">
+                            <p id="email">Email: {{email}}</p>
+                            <p id="nome-usuario"><strong>{{nome}}</strong> disse:
+                            <span class="postado-em">às {{#formatDate this.data}}{{/formatDate}}</span></p>
+                            
+                            <p id="comentario">{{this.comentario}}</p>
+                            
+                                <!--<label for="comentario">Conteudo</label>
+                                        <textarea name="comentario" class="form-control" value="">{{comentario}}</textarea>-->
+
+                                <div id="teste">
+                                    <form action="/admin/comentario/edit/" method="POST">
+                                        <input type="hidden" name="id" value="{{_id}}">
+                                        <input type="hidden" id="nome" name="nome" class="form-control" value="{{nome}}">
+                                        <input type="hidden" id="email" name="email" class="form-control" value="{{email}}">
+                                    </form>
+
+                                </div>    
+                        </div>
+                    </div>
+        {{else}}
+        {{/each}} 
+        </div> 
+    {{/if}} 
+
+    <h1>Deixe um comentário</h1>
+    
+<form action="/usuario/comentario/postar/{{postagem._id}}" method="POST">
+        <input type="hidden" value="{{postagem._id}}" name="id">
+    {{#if user}}
+        Comentar como: <strong>{{user.nome}}</strong><br>
+        <input type="hidden" id="nome" name="nome" value="{{user.nome}}">
+        <input type="hidden" name="email" id="email"  value="{{user.email}}" > 
+    {{else}}
+    <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." class="form-control">
+    <label for="email">Digite seu e-mail: </label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email..." class="form-control">
+    {{/if}}
+
+    <label for="comentario">Comentário:</label>
+        <textarea name="comentario" id="comentario"  class="form-control"></textarea>
+    <button id="btn-comentario" type="submit" class="btn btn-success mt-4"> Publicar comentário</button>
+</form>
+</div>
+

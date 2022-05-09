@@ -1,0 +1,51 @@
+<h2>Blog</h2>
+
+<hr>
+{{#each postagens}}
+    
+    <div id="publicacoes">
+        <div class="pub-area">
+            <div class="container-fluid mt-3">
+                 <div class="row">
+                     {{/each}} 
+                                <div id="lateral" class="col-md-3">
+                                    <h6>Pesquisar</h6>
+                                    <form action="/usuario/PesqPostagem" method="post">
+                                        <input type="text" name="txtPesquisa" id="pesquisar">
+                                        <input type="submit" value="Pesquisar" class="btn-pesquisar widget widget_block widget_search"> 
+                                    </form>
+
+                                    <h1>Recent Posts</h1>
+                                    {{#each postagens}}
+                                        <!--passar os titulos como link -->
+                                        <a href="/usuario/blog/lista/{{_id}}"><p>{{this.titulo}}</p></a>  
+                                    {{/each}}
+                                    <h1>Recent Comments</h1>
+                                    <!--passar os comentario recentes -->
+                                </div>
+                            {{#each postagens}}
+                    <div class="col-md-9">   
+                            <a href="/usuario/listaCategoria/{{categoria._id}}"><p class="categoria">{{categoria.nome}}</p></a>
+
+                            <a href="/usuario/blog/lista/{{_id}}"><h3>Título: {{this.titulo}}</h3></a>
+
+                            <span class="postado-em">Publicado em {{#formatDate postagem.data}}{{/formatDate}}</span>
+
+                            <a href="/usuario/blog/lista/{{_id}}"><small><img src="/upload/{{this.img}}" alt="" id="imagem"></small></a> 
+
+                            <div id="previa">
+                            <p>{{this.conteudo}}</p>
+                            </div>
+                            <hr>
+                    </div>
+                    
+                </div> 
+            </div> 
+        </div>
+    </div>                    
+
+{{else}}
+    <p>Nenhuma postagem registrada</p>
+{{/each}}
+
+

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row" id="dashboard-background">
+        <div class="col-md-2 padding-0 mt-5" id="dashboard-esquerda">
+            <div class="d-flex flex-column flex-shrink-0" id="sidebar">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="/admin" class="nav-link">
+                            <i class="fa-solid fa-house"></i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/UsuarioDashboard" class="nav-link">
+                            <i class="fa-solid fa-user"></i>
+                            Usuários
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/PostagemDashboard" class="nav-link">
+                        <i class="fa-regular fa-calendar-check"></i>
+                            Postagens
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/CategoriaDashboard" class="nav-link">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>   
+                            Categorias
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="col-md-10 padding-0 text-white" id="dashboard-direita">
+            
+                <h5 class="ms-5 mt-4">Postagens:</h5> 
+                <div id="div-postagem">
+                    <a href="/admin/postagens/add/" id="bt-postagem" ><button class="mt-2 mb-2">Nova postagem</button></a>
+                    <a href="/admin/postagens/" id="bt-postagem" ><button class="mt-2 mb-2">Listar postagens</button></a> <br><br>
+                </div>
+            <br>
+            <p class="qtd-postagens"><Strong >Quantidade de postagens: {{quantPostagens}}</Strong><br></p>
+        
+               
+            
+            
+
+        </div>
+</div>

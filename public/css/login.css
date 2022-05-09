@@ -1,0 +1,28 @@
+
+label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#botao{
+    font-weight: 600;
+    background-color: rgb(255, 186, 0);
+    border-color: transparent;
+}
+
+#admin{
+    text-align: right;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+#usuario{
+    margin-top: -50px;
+}
+#titulo-login{
+    text-align: center;
+    margin-top: 15px;
+}
+#login{
+    margin-top: 40px;
+    margin-left: 25%;
+}

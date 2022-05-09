@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row" id="dashboard-background">
+        <div class="col-md-2 padding-0  mt-5" id="dashboard-esquerda">
+            <div class="d-flex flex-column flex-shrink-0 text-white" id="sidebar">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="/admin" class="nav-link">
+                            <i class="fa-solid fa-house"></i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/UsuarioDashboard" class="nav-link">
+                            <i class="fa-solid fa-user"></i>
+                            Usuários
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/PostagemDashboard" class="nav-link">
+                        <i class="fa-regular fa-calendar-check"></i>
+                            Postagens
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/CategoriaDashboard" class="nav-link">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>   
+                            Categorias
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+
+            
+
+        <div class="col-md-10 padding-0" id="dashboard-direita">
+            <a href="/admin/registro"><button class="mt-4" id="btn-novousuario">Novo usuário</button></a>
+            <h5 id="tabela" class="mt-1">Usuarios:</h5>
+           
+            <!--Teste ajax-->
+            <a href="#" id="bt-postagem" a-view="listarUsuario" a-folder="user" onclick="fetchContent(this)"><button class="mt-2 mb-2">Listar usuario</button></a>
+            
+            <div class="content mt-2" id="ajax-content" >
+                    
+            </div>
+            
+
+
+        </div>
+</div>

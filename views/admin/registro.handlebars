@@ -1,0 +1,40 @@
+
+{{#each erros}} <!--erros--> 
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{/each}}
+<h3>Registrar um novo usuario:</h3>
+    <button onclick="voltar()" class="btn btn-secondary mb-3 mt-2 ms-2"> 
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+    </button>
+<div class="card" > 
+    <div class="card-body w-50" id="login">
+        <form action="" method="POST">
+            <label for="nome"> Nome: </label>
+                <input type="text" name="nome" class="form-control">
+
+            <label for="usuario"> Usuario: </label>
+                <input type="text" name="usuario" class="form-control">
+
+            <label for="email"> Email: </label>
+                <input type="email" name="email" class="form-control">
+
+            <label for="senha"> Senha: </label>
+                <input type="password" name="senha" class="form-control">
+                
+            <label for="senha2">Repita a senha: </label>
+                <input type="password" name="senha2" class="form-control">
+            
+            <label for="eAdmin" > É admin:</label>
+            <select name="eAdmin" id="eAdmin" class="form-control">
+                <option value="1"> Sim</option>
+                <option value="0" selected>Não</option>
+            </select>
+            
+
+            <button id="botao" type="submit" class="btn btn-success mt-2">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+

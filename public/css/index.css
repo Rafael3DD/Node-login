@@ -1,0 +1,425 @@
+/*Gerais*/
+
+body{
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
+.row{
+    margin: 0;
+}
+
+.container-fluid{
+    margin: 0;
+}
+.container{
+    padding: 70px 0;
+}
+
+/*Barra de navegação*/
+.navbar{
+    background-color: rgb(255, 186, 0);
+}
+
+#nav-container{
+    padding: 0;
+   
+}
+
+.navbar{
+    color: #FFF;   
+}
+
+.bg-dark{
+    width: 100%;
+    padding: 5px;   
+}
+.navbar-brand:hover{
+    color:rgb(201,145,0);
+}
+
+.navbar-brand{ /*Logo*/
+    padding-left: 0px;
+    padding-top: 12px;
+}
+.navbar-brand img{
+    margin-left: 10px;
+}
+
+
+#navbar-links a{
+    color: #FFF;
+}
+
+#navbar-links a:hover{
+    color:rgb(201,145,0);
+    transition: 0.5s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1rem .9rem; /*Valores que se adaptam de acordo com a página*/
+}
+
+/*Slide*/
+
+.container-fluid{
+    padding: 0;
+}
+
+.mainSlider .carousel-inner, #mainSlider .carousel-item{
+    height: 100vh;
+}
+
+#mainSlider .carousel-caption{
+    top: 27%;
+}
+
+#mainSlider .carousel-caption h2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom:30px;
+    text-shadow: rgb(214,80,80) 1px 0.3px 0.3px;
+}
+
+#mainSlider .carousel-caption p{
+    font-size: 29px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    text-shadow: rgb(214,80,80) 0.2px 0.3px 0.1px;
+}
+
+/*Texto Deslizante*/
+.move-text p, h2, .carousel-item p::after{
+    text-align: center;
+}
+.move-text p, h2, .carousel-item p::after{
+        animation-duration: 2s;
+        animation-name: slidein;
+}
+      
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.carousel-item p::after{/*listra vermelha*/
+    content: "";
+    border-top: 1px solid rgb(214,80,80);
+    width: 35%;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    margin: 0;
+    padding: 0;
+    max-width: 35%;
+    min-width: 35%;
+}
+
+.main-btn{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: rgb(214, 80, 80);
+    border-color: rgb(250, 233, 233);
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4%;
+    padding: 14px 35px;
+    position: absolute;
+    border: 1px solid transparent;
+    top: 48%;
+    left: 42%;
+
+}
+
+.main-btn:hover{
+    color:rgb(214, 80, 80);
+    background-color: transparent;
+    border-color: rgb(214, 80, 80);
+    transition: 0.5s;
+}
+
+/*Sobre a empresa*/
+
+#about-area{
+    background-color: #FFF;
+}
+
+.about-title{
+    font-size: 45px;
+    color: rgb(68, 63, 63);
+    font-weight: 600;
+}
+
+.col-md-7 p{
+    color: rgb(68, 63, 63);
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.img-fluid{
+    width: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-2{
+    text-decoration: none;
+    background-color: rgb(214, 80, 80);
+    color: #FFF;
+    padding: 10px 25px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 4%;
+    border: 1px solid transparent;
+    top: 50px;
+    position: relative;
+}
+
+.btn-2:hover{
+    color: #FFF;
+}
+
+hr{
+    border:0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, ));
+    position: relative;
+    top:60px;
+    bottom:60px;
+}
+
+/*serviços*/
+h4{
+    font-weight: 600;
+    text-align: left;
+}
+.col-md-4 p{
+    font-weight: 600;
+    color: rgb(100, 96, 118);
+    font-size: 14px;
+    text-align: left;
+    margin-top: 15px;
+}
+ 
+/*Blog*/
+
+
+body #nav-blog{
+    margin: 0; 
+    width: 100vw;
+}
+
+#nav-blog ul{
+    list-style: none;
+    display: flex;
+    margin-right: 109px;
+    margin-top: 24px;
+    
+}
+
+#nav-blog li{
+    margin:0;
+    padding:0;
+    
+}
+
+#nav-blog{
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    
+}
+
+#nav-blog a{ /*botoes home blog contato*/
+    color: #FFF;
+    overflow: hidden;
+}
+
+/*Fixando menu*/
+.fixedblog a {
+    position: fixed;   
+}
+
+header #home-menu2{
+    margin-left: 994px;
+}
+header #blog-menu2{
+    margin-left: 1065px;
+}
+header #contact-menu2{
+    margin-left: 1126px;
+}
+
+
+
+#nav-blog a:hover{
+    color:rgb(201,145,0);
+    transition: 0.5s; 
+}
+
+header #nav-blog{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../imagens\ finans/blog-image.jpg'); /*escurece a imagem sem atingir*/
+    height: 48vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+#cabecalho-menu-blog .navbar-links-blog{
+    height: 100%;
+}
+
+#logo-blog{ /*Logo*/
+    padding-left: 102px;
+    padding-top: 20px;
+}
+
+#navbar-blog{/*Botões menu*/
+    padding-right: 115px;
+    padding-top: 0px;
+}
+
+
+/*publicacoes*/ 
+
+#publicacoes .container p{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(215, 105, 103); 
+   
+}
+#publicacoes .container .categoria{
+    letter-spacing: 5px;
+    font-size: 13px;
+    
+}
+#publicacoes .container h3{
+    padding-top: 0;
+    font-size: 35px;
+    color: rgb(71, 66, 93);
+    font-weight: 400;
+}
+
+#publicacoes .container span{
+    color: rgb(109, 112, 135);
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    font-size: 12px;
+    
+}
+#publicacoes .container{
+    text-align: center;
+}
+
+#publicacoes img{
+    width: 95%;
+    padding-top: 30px;
+}
+#publicacoes #pesquisar{
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+    width: 40%;
+    border-radius: 5%;
+    border: solid 1px rgb(219, 219, 219);
+    height: 50px;
+}
+
+#publicacoes h6{
+   color: rgb(118, 118, 136);
+   font-weight: 600;
+}
+
+#publicacoes #lateral{
+    border: solid 1px rgb(229, 229, 229);
+    padding-top: 30px; 
+    padding-left: 12px;
+    max-height: 800px;
+}
+
+#publicacoes .col-md-9{
+    padding-right: 50px;
+}
+
+#publicacoes .btn-pesquisar{
+    background-color: rgb(247, 247, 247);
+    margin-left: 5px;
+    padding: 10px 10px 10px 10px;
+    height: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 5%;
+    border: solid 1px rgb(219, 219, 219);
+    width: 40%;
+    
+}
+
+#publicacoes .btn-pesquisar:hover{
+    color: rgb(215, 105, 103);
+    transition: .3s;
+}
+
+
+
+#publicacoes h6{
+    text-align: left;
+    margin-left: 20px;
+}
+
+/*Parte lateral*/
+#publicacoes #lateral h1{
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 20px;
+    width: 0;
+    padding: 0;
+    color: rgb(68, 63, 63);
+}
+
+#publicacoes #lateral p{
+    color: rgb(112, 107, 107);
+    text-transform: none;
+    margin: 10px;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+#publicacoes #previa p{
+    text-transform: none;
+    margin-top: 20px;
+    padding: 0;
+    color: rgb(71, 66, 93);
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+    width: 95%;
+    margin-bottom: 0;
+}
+
+#cat2{
+    margin-top: 105px;
+}
+
+#publicacoes hr{
+    margin-top:0;
+    width: 97%;
+    position: left;
+    margin-left: 20px;
+}
+

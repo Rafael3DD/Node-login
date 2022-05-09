@@ -1,0 +1,109 @@
+<div class="container-fluid">
+    <div class="row" id="dashboard-background">
+        <div class="col-md-2 padding-0 mt-5" id="dashboard-esquerda">
+            <div class="d-flex flex-column flex-shrink-0" id="sidebar">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="/admin" class="nav-link">
+                            <i class="fa-solid fa-house"></i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/UsuarioDashboard" class="nav-link">
+                            <i class="fa-solid fa-user"></i>
+                            Usuários
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/PostagemDashboard" class="nav-link">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            Postagens
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/CategoriaDashboard" class="nav-link">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Categorias
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="col-md-10 padding-0" id="dashboard-direita">
+            <div class="container">
+                <div class="row row-cols-auto" id="alt">
+                    <div class="col-4" id="dados">
+                        <h2>Usuários</h2>
+                        <div class="card text-white bg-secondary mt-2" style="max-width: 20rem;">
+                            <input type="hidden" name="user" id="user" value="{{quantUsuarios}}">
+                            <div class="card-header">{{quantUsuarios}}</div>
+                            <div class="card-body">
+                                <div class="circle-box">
+                                    <div id="circulo1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4" id="dados">
+                        <h2>Postagens</h2>
+                        {{#each usuarios}}
+                            <input class="usuarios_mes" type="hidden" name="usuarios_mes" id="usuarios_mes" value="{{formatMes this.data}}">
+                            
+                        {{/each }}
+
+                        {{#each postagens}}
+                            <input class="postagens_mes" type="hidden" name="mes" id="mes" value="{{formatMes this.data}}">
+                           
+                        {{/each }}
+
+                        <div class="card text-white bg-secondary mt-2" style="max-width: 20rem;">
+                            <input type="hidden" name="post" id="post" value="{{quantPostagens}}">
+                            <div class="card-header">{{quantPostagens}}</div>
+                            <div class="card-body">
+                                <div class="circle-box">
+                                    <div id="circulo2">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4" id="dados">
+                        <h2>Categorias</h2>
+                        <div class="card text-white bg-secondary mt-2" style="max-width: 20rem;">
+                            <input type="hidden" name="category" id="category" value="{{quantCategorias}}">
+                            <div class="card-header">{{quantCategorias}}</div>
+                            <div class="card-body">
+                                <div class="circle-box">
+                                    <div id="circulo3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            
+            <div class="col" id="grafico">
+                <div class="card mt-5">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+

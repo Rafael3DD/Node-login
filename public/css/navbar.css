@@ -1,0 +1,209 @@
+#erro-estilo{
+    margin-top: 500px;
+}
+
+/*Dashboard esquerda*/
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+#sidebar{
+    background-color: none;
+}
+
+#dashboard-esquerda{
+    margin: 0;
+}
+#sidebar li{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#sidebar li a{
+    border: solid white 1px;
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+ 
+}
+
+
+
+
+/*Parte da direita*/
+
+#btn-novousuario{
+    font-size: 18px;
+    color: #FFF;
+    height: 40px;
+    width: 180px;
+    border: none;
+    background-image: linear-gradient(60deg, #6630EA, #351A7A, #7327BA);
+    border: none;
+    border-radius: 40px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    
+    
+}
+#btn-novousuario:hover{
+    margin-top: 20px;
+    transform: scale(1.2);
+    transition: 0.5s;
+    
+}
+
+#dashboard-direita, #dashboard-direita #tabela{
+   padding-left:30px ;
+    
+}
+#dashboard-direita #btn-editUsuario{
+    width: 55px;
+}
+
+#dashboard-direita #div-delete{
+    float: right;
+    font-size: 0;
+    margin-right:20px;
+    margin-left: -20px;
+}
+#sidebar .nav-link{
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+#sidebar li i{
+    margin-right: 20px;
+}
+
+#sidebar li:hover{
+    background-color: #FFF ;
+    transition: 0.3s;
+
+}
+#sidebar .nav-link:hover{
+    color: black;
+
+}
+
+
+
+/*Dados*/
+#dados{
+    width: 33%;
+}
+
+#dados h2{
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+ #dashboard-background{
+    background-image: url('../img/Background.jpg');
+    Background-position:top;
+    background-size: cover;
+    height: 700px;
+}
+
+.card-header{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+   
+}
+
+/*Gráfico*/
+#grafico .card{
+margin-left: 2%;
+margin-right: 4%;
+height: 300px;
+
+}
+
+#grafico canvas{
+    max-width: 80vw;
+    max-height: 40vh;
+}
+
+/*barra de progresso*/
+.circle-box div{
+    padding: 0 80px;
+}
+.progressbar-text{/*Biblioteca que vem dentro do circulo*/
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/*tabela*/
+#tabela, #tabela table{
+    color: #FFF;
+    
+}
+table{
+    background-image:  linear-gradient(60deg, #6630EA, #351A7A, #7327BA); 
+}
+
+
+table tr:hover{
+    color: #FFF;
+    
+    transition: 0.5s;
+    background-color:  #0e0f52;
+}
+
+#tabela td, #tabela, #tabela tr{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.table tbody tr{
+    margin-left: 10px;
+}
+
+
+
+#dashboard-direita #bt-postagem button{
+    font-size: 18px;
+    color: #FFF;
+    margin: 20px;
+    height: 120px;
+    width: 450px;
+    border: none;
+    background-image: linear-gradient(60deg, #6630EA, #351A7A, #7327BA);
+}
+
+#dashboard-direita #bt-postagem button:hover{
+    background-color: blue;
+    transform: scale(1.05);
+    transition: 0.5s;
+    text-align: center;
+    
+}
+
+
+#dashboard-direita #div-postagem{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qtd-postagens{
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Ajax*/
+div#ajax-content{
+    width: 85%;
+    
+}
+
+#dashboard-direita div#ajax-content{
+    margin-left: 100px;
+  
+}

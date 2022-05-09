@@ -1,0 +1,369 @@
+#publicacoes{
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+
+
+#publicacoes .container-fluid p{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(215, 105, 103); 
+}
+
+#publicacoes .container-fluid .categoria{
+    letter-spacing: 5px;
+    font-size: 13px;
+    
+}
+
+#publicacoes .container-fluid h3{
+    padding-top: 0;
+    font-size: 35px;
+    color: rgb(71, 66, 93);
+    font-weight: 400;
+}
+
+#publicacoes .container-fluid {
+    text-decoration: none;
+}
+
+#publicacoes .container-fluid span {
+    color: rgb(109, 112, 135);
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#publicacoes .container-fluid{
+    text-align: center;
+}
+
+#publicacoes img{
+    width: 95%;
+    padding-top: 30px;
+}
+
+#publicacoes #pesquisar, #lateral #pesquisar{
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+    width: 45%;
+    border-radius: 5%;
+    border: solid 1px rgb(219, 219, 219);
+    height: 50px;
+    
+}
+
+#publicacoes .botao{
+    text-align: left;
+    margin-left: 18px;
+}
+
+
+/*Pesquisa Parte Lateral posiciona da barra lateral*/
+#publicacoes #lateral, #lista #lateral{
+    border: solid 1px rgb(229, 229, 229);
+    padding-top: 30px; 
+    padding-left: 12px;
+    height: 800px;
+    max-height: 800px;
+    width: 20%;
+    right: 8%;
+    text-align: center;
+    margin-top: 5px;
+    float: right;
+    position: absolute;
+    margin-left: 900px;
+}
+
+#publicacoes .col-md-9{
+    padding-right: 50px;  
+}
+
+
+#publicacoes .btn-pesquisar, #lista .btn-pesquisar{
+    background-color: rgb(247, 247, 247);
+    margin-left: 5px;
+    padding: 10px 10px 10px 10px;
+    height: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 5%;
+    border: solid 1px rgb(219, 219, 219);
+    width: 50%; 
+}
+
+#publicacoes .btn-pesquisar:hover, #lista .btn-pesquisar:hover{
+    color: rgb(215, 105, 103);
+    transition: .3s;
+}
+
+#publicacoes h6, #lista h6{
+    color: rgb(118, 118, 136);
+    font-weight: 600;
+    text-align: left;
+    margin-left: 5px;
+ }
+
+#publicacoes #admin-postagens{
+    text-align: center;
+}
+
+
+#publicacoes #lateral h1, #lista #lateral h1{
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 10px;
+    width: 0;
+    padding: 0;
+    
+    color: rgb(68, 63, 63);
+}
+
+#publicacoes #lateral p, #lista #lateral p{
+    color: rgb(112, 107, 107);
+    text-transform: none;
+    margin-left:20px ;
+    font-size: 16px;
+    text-align: left;
+    display:block;
+    
+}
+#publicacoes #previa p, #lista #lateral p{
+    text-transform: none;
+    margin-top: 20px;
+    padding: 0;
+    color: rgb(71, 66, 93);
+    text-align: left;
+    margin-left: 20px;
+    font-size: 16px;
+    width: 97%;
+    margin-bottom: 0;
+}
+
+#cat2{
+    margin-top: 105px;
+}
+
+
+#publicacoes hr, #lista hr{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width: 95%;
+    position: left;
+    margin-left: 20px;
+}
+
+
+/*Limitando caracteres do texto*/
+#publicacoes #previa p{
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 6em; /* aqui vc controla a altura da caixa de texto */
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+
+#publicacoes #previa p:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#publicacoes .container-fluid a {
+    text-decoration: none;
+}
+
+body{
+    line-height: 2;
+}
+
+/*Lista postagens*/
+
+#lista .container-fluid, .form-comentario{
+    font-family: Raleway;
+}
+
+#lista .container-fluid h1{
+    font-size: 35px;
+    color: rgb(71, 66, 93);
+    margin-top: 20px; /*Margem top*/
+    margin-bottom: 0;
+}
+
+#lista .container-fluid{
+    text-align: center;
+    
+}
+#lista .postado-em {
+    color: rgb(71, 66, 93);
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-right: 645px;
+}
+
+
+#lista .container-fluid img{
+    margin-top: 10px;
+    width: 70%;
+    margin-right: 160px;
+}
+
+#lista .container-fluid p{
+    text-transform: none;
+    margin-top: 20px;
+    padding: 0;
+    color: rgb(71, 66, 93);
+    text-align: justify;
+    margin-left: 70px;
+    font-size: 16px;
+    width: 70%;
+    margin-bottom: 0;
+    white-space: pre-line; /*Pula paragrafo*/
+}
+
+/*Formulário de email*/
+#icone h1{
+    text-align: left;
+  
+}
+
+.form-comentario{
+    width: 50%;
+    margin-left: 70px; 
+}
+
+.form-comentario label{
+    color: rgb(71, 66, 93);
+    margin-top: 15px;
+    font-size: 16px;
+}
+.form-comentario textarea{
+    height: 120px;
+}
+
+.form-control{
+    height: 60px;
+    background-color: #E9EBEA;
+}
+
+/*botao comentario*/
+.form-comentario #btn-comentario{
+    text-align: left;
+    height: 50px;
+    width: 180px;
+    margin-bottom: 30px;
+
+}
+.form-comentario #btn-comentario:hover{
+    background-color: transparent;
+    color: #1ca7c0;
+    border-color: #1ca7c0;
+    text-align: left;
+}
+
+#icone{
+   text-align: left;
+   margin-left: 70px;
+}
+
+.form-comentario h1{
+    margin-top: 25px;
+}
+
+
+/*Estilizando comentários*/
+
+.campo-comentario{
+    color: rgb(114, 109, 109);
+}
+
+ .campo-comentario  #comentario{
+    word-wrap: break-word; /*Evita overflow do texto*/
+    text-align: left;
+    background-color: #E9EBEA;
+    padding: 15px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}   
+
+.campo-comentario #email{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.campo-comentario #nome-usuario{
+    text-align: left;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 20px;
+    
+}
+.form-comentario{
+    margin-left: 90px;
+
+}
+#lista  #lateral a, #lista  #lateral p{
+    color: rgb(71, 66, 93);
+    text-decoration: none;
+    text-align: left;
+    margin-top: 15px;
+    
+}
+
+#teste #btn-delete{
+    margin-left: 90vh;
+    
+}
+
+#teste #btn-editar{
+    margin-left: 80vh;
+    margin-top: -65px;
+}
+
+/*Escondendo comentário*/
+.hide{
+    display: none;
+}
+
+
+.campo-comentario p{
+    margin-left: 20px;
+}
+
+#btn-confirma{
+    margin-left: 20px;
+}
+
+
+/*Paginação*/
+#paginacao li{
+	display: inline-block;
+
+}
+.page-item button{
+    font-weight: bold;
+    
+}
+
+.page-item #btn-inicio{    
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+
+.page-item #btn-final{    
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+}
+.page-item button:hover{
+    background-color:  #6c58bF;
+    color:  white;
+    transition: .2s;
+    
+}

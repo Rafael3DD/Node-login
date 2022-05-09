@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.3",
+    "express-favicon": "^2.0.1",
+    "express-handlebars": "^6.0.3",
+    "express-session": "^1.17.2",
+    "favicon": "^0.0.2",
+    "handlebars-paginate": "^0.1.0",
+    "momen": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.8",
+    "multer": "^1.4.4",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "name": "projeto",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

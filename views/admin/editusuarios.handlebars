@@ -1,0 +1,33 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div> <!--A cada erro imprime o texto adequado-->
+{{else}}
+
+{{/each}}
+
+<h3>Editar Usuario</h3>
+<div class="card">
+    <div class="card-body">
+        
+           
+        <button onclick="voltar()" class="btn btn-secondary mb-3"> 
+           <i class="fa-solid fa-arrow-left"></i> Voltar
+        </button>
+
+        <form action="/admin/usuario/edit" method="POST">
+        <input type="hidden" name="id" value="{{usuarios._id}}"> 
+        <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Nome da categoria" class="form-control" value="{{usuarios.nome}}">
+        <label for="email" >Email: </label>
+            <input type="email" id="email" name="email" placeholder="Slug da categoria" class="form-control" value="{{usuarios.email}}">
+         <label for="eAdmin" > É admin:</label>
+            <select name="eAdmin" id="eAdmin" class="form-control" required>
+                <option selected value="" disabled>Selecione uma opção</option>            
+                <option value="1"> Sim</option>
+                <option value="0">Não</option>
+            </select>
+            <button type="submit" class="btn btn-success mt-4">Editar Usuario</button><br>
+        </form>
+        
+    
+    </div>
+</div>

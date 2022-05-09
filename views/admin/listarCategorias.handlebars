@@ -1,0 +1,33 @@
+<h5 id="tabela" class="mt-1">Usuarios:</h5>
+            <div class="row" id="tabela">
+                <table class="table mt-2">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Slug</th>
+                            <th scope="col">Data</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {{#each categorias}}
+                        <tr>
+                            <td>{{nome}}</td>
+                            <td>{{slug}}</td> 
+                            <td>{{#formatDate date}}{{/formatDate}}</td> 
+                            <td><a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-secondary btn-sm mb-2 mt-2">Editar</button></a></td>
+                            <td>
+                                <form action="/admin/categorias/deletar" method="POST">
+                                    <input type="hidden" name="id" value="{{_id}}">
+                                    <button type="submit" class="btn btn-danger btn-sm mt-2 mb-2" id="btn-editUsuario"><i class="fa-solid fa-trash-can"></i></button>
+                                </form>
+                            </td>
+                            
+                            {{else}}
+                            {{/each}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+

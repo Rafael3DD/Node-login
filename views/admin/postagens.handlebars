@@ -1,0 +1,40 @@
+
+<h2>Editar Postagens:</h2>
+
+<hr>
+
+<a href="/admin/postagens/add"><button class="btn btn-success mb-4">Nova postagem</button></a>
+{{#each postagens}}
+{{postagens}}
+{{categoria.data}}
+        <div id="publicacoes">
+            <div class="pub-area">
+                <div class="container-fluid">
+                        <div class="row">  
+                            <div class="col-md-9">
+                                <p class="categoria">{{categoria.nome}}</p>
+                                <h3>Título: {{this.titulo}}</h3>  
+
+                                <span class="postado-em">Data: {{this.data}}</span>
+
+                                <small><img src="/upload/{{this.img}}" alt="" id="imagem"></small>
+
+                                 <div id="previa">
+                                    <p>{{this.conteudo}}</p>
+                                </div>
+                                <div class="botao">
+                                    <a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-success mt-4">Editar postagem</button></a> <br>
+                                    <a href="/admin/postagens/deletar/{{_id}}"><button class="btn btn-danger mt-3 mb-5">Deletar Postagem</button></a>       
+                                </div>
+                                <hr>  
+                            </div>
+     
+                        </div>
+                </div>
+            </div>
+        </div>
+
+{{else}}
+    <p>Nenhuma postagem registrada</p>
+{{/each}}
+
